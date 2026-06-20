@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_URL = 'http://localhost:5000/api/tasks';
+const API_URL = import.meta.env.PROD ? '/_/backend/api/tasks' : 'http://localhost:5000/api/tasks';
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
